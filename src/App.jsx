@@ -167,6 +167,26 @@ const subPromptsData = {
       text: "Create an image of this woman. Copy her facial features. MAKE IT REALISTIC. A serene portrait of a woman with long, dark, wavy hair, lying on her stomach with her chin in her hands. She is wearing a light-colored, off-the-shoulder top with puff sleeves. A white flower partially covers her eye, and she is surrounded by various flowers, plants, and a vase of lilies. The image has soft, diffused lighting and a high-resolution, natural quality. lu อัตราส่วนภาพ 9:16.",
       img: images.Floralwomanportrait3
     }
+  ],
+  "Nobleman Horse AI Edits": [
+    {
+      id: 1,
+      title: "Orange nobleman horse",
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing orange wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.Floralwomanportrait1
+    },
+    {
+      id: 2,
+      title: "Red nobleman horse",
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing crimson-red wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.Floralwomanportrait2
+    },
+    {
+      id: 3,
+      title: "Blue nobleman horse",
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing blue wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.Floralwomanportrait3
+    }
   ]
 };
 
@@ -281,7 +301,8 @@ export default function App() {
               {filteredPrompts.length === 0 ? (
                 <p className="text-center text-gray-400">No prompts found.</p>
               ) : (
-                <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
+
                   {filteredPrompts.map((prompt) => (
                     <motion.div
                       key={prompt.id}
@@ -310,7 +331,7 @@ export default function App() {
               <ArrowLeft className="w-5 h-5 mr-2" /> Back to Prompts
             </button>
             <h2 className="text-3xl font-bold mb-8">{selectedPrompt}</h2>
-            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {subPrompts.map((sp) => (
                 <motion.div
                   key={sp.id}
