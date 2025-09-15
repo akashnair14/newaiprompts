@@ -24,15 +24,22 @@ import MagentaGarbaGlow from './assets/images/MagentaGarbaGlow.avif';
 import Floralwomanportrait1 from './assets/images/Floralwomanportrait1.avif';
 import Floralwomanportrait2 from './assets/images/Floralwomanportrait2.avif';
 import Floralwomanportrait3 from './assets/images/Floralwomanportrait3.avif';
+import polaroid from './assets/images/polaroid.avif';
 import noblemanorange from './assets/images/noblemanorange.png';
 import noblemanred from './assets/images/noblemanred.png';
 import noblemanblue from './assets/images/noblemanblue.png';
+import Purpleretrosaree from './assets/images/Purpleretrosaree.png';
+import Redchiffonretro from './assets/images/Redchiffonretro.png';
+import Yellowchiffonretro from './assets/images/Yellowchiffonretro.png';
+import Royalbluesilkretro from './assets/images/Royalbluesilkretro.png';
+import Blackretrosaree from './assets/images/Blackretrosaree.png';
+import Bluecottonretro from './assets/images/Bluecottonretro.png';
 
 const images = {
   navratriGirl, BoyRetroEdits, CinematicLion, FloralPortraitEdits, GiantStatueEdits,
   LuxuryCarEdits, MountainCoffee_Edits, NoblemanHorseAIEdits, RetroSareeAIEdits,
   Streetwear_Fashion_Ai, SunshineYellowDandiya, EmeraldGreenSpin, FieryRedGarba,
-  GreenGhagraPortrait, joyfulDandiyaTwirl, MagentaGarbaGlow, Mountaincoffeeportraitfront, Mountaincoffeeportrait, Floralwomanportrait1, Floralwomanportrait2, Floralwomanportrait3, noblemanorange, noblemanred, noblemanblue
+  GreenGhagraPortrait, joyfulDandiyaTwirl, MagentaGarbaGlow, Mountaincoffeeportraitfront, Mountaincoffeeportrait, Floralwomanportrait1, Floralwomanportrait2, Floralwomanportrait3, noblemanorange, noblemanred, noblemanblue, Purpleretrosaree, Redchiffonretro, Royalbluesilkretro, Yellowchiffonretro, Blackretrosaree, Bluecottonretro, polaroid
 };
 
 const prompts = [
@@ -62,36 +69,42 @@ const prompts = [
   },
   {
     id: 5,
+    title: "Gemini Polaroid Prompt",
+    description: "Give your couple photos a cool retro polaroid effect.",
+    img: images.polaroid
+  },
+  {
+    id: 6,
     title: "Cinematic Lion & Vintage Car",
     description: "Create dramatic scenes with lions and vintage cars.",
     img: images.CinematicLion
   },
   {
-    id: 6,
+    id: 7,
     title: "Boy Retro Edits",
     description: "Give your photos a cool retro 80s or 90s vibe.",
     img: images.BoyRetroEdits
   },
   {
-    id: 7,
+    id: 8,
     title: "Luxury Car Edits",
     description: "Transform car photos into sleek luxury visuals.",
     img: images.LuxuryCarEdits
   },
   {
-    id: 8,
+    id: 9,
     title: "Retro Saree AI Edits",
     description: "Style portraits with elegant retro saree designs.",
-    img: images.RetroSareeAIEdits
+    img: images.Redchiffonretro
   },
   {
-    id: 9,
+    id: 10,
     title: "Giant Statue Edits",
     description: "Create majestic giant statue-inspired edits with AI.",
     img: images.GiantStatueEdits
   },
   {
-    id: 10,
+    id: 11,
     title: "Streetwear Fashion Ai",
     description: "Create cozy mountain coffee-themed visuals with AI.",
     img: images.Streetwear_Fashion_Ai
@@ -189,6 +202,95 @@ const subPromptsData = {
       title: "Blue nobleman horse",
       text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is dressed in a royale Blue wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
       img: images.noblemanblue
+    }
+  ],
+  "Boy Retro Edits": [
+    {
+      id: 1,
+      title: "Black kurta portrait",
+      text:
+        "Convert 4k HD realistic, a stunning portrait of a young Indian man with dark, wavy hair. He is wearing a translucent elegant black kurta, looking slightly to his right with a soft serene expression. I want same face as I uploaded on alternation 100 percent same. The background is a plain warm-toned wall illuminated by a warm light source from the right, creating a distinct, soft-edged shadow of his profile and hair on the wall behind him. The overall mood is retro and artistic.",
+      img: images.bl
+    },
+    {
+      id: 2,
+      title: "Green retro outfit",
+      text:
+        "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect plain chiffon dark green shirt and beige colour pants Pinteresty aesthetic retro outfit. It must feel like a 90s movie — dark brown wavy curly hair with a small flower tucked visibly into his curls and romanticising windy environment. The guy is standing against a solid wall, deep shadows and contrast drama creating a mysterious and artistic atmosphere. The lighting is warm with golden tones, evoking a sunset or golden hour glow. The background is minimalist and slightly textured. The expression on his face is moody, calm yet happy and introspective."
+    },
+    {
+      id: 4,
+      title: "Dreamy Boy",
+      text:
+        "Create a dreamy soft-focus image of the reference picture, styled in an ethereal modern surrealist aesthetic. The boy is wearing a loose ivory linen shirt with delicate embroidery and light sage trousers, giving a poetic, timeless look. His dark brown wavy curls are glowing in the light, with tiny scattered petals caught in his hair instead of just one flower, as if carried by the wind. The atmosphere feels airy and magical — pastel skies with faint watercolor-like clouds behind him, a gentle painterly texture to the background. The lighting is diffused and pearly, evoking dawn or an overcast day, with soft flares that feel like a dream sequence. His expression is serene, contemplative, almost as if lost in thought, creating a tender emotional depth. The style should feel like a blend of fine art photography and impressionist painting rather than vintage film."
+    },
+    {
+      id: 5,
+      title: "Retro red wine look",
+      text:
+        "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect red wine color Pinterest aesthetic retro shirt with white pants and holding a rose flower in hands. It must feel like a 90s movie and romanticising windy environment. The boy is standing against a solid wall, deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with golden tones evoking a sunset or golden hour glow. The background is minimalist and slightly textured. The expression on his face is moody, calm yet happy and introspective."
+    },
+    {
+      id: 6,
+      title: "Sherwani silver portrait",
+      text:
+        "Convert, 4K HD realistic, a stunning portrait of a young Indian man with hair like mine. He is wearing a white and silver sherwani with dhoti & dupatta slaying down from his neck, and a silver watch in his hand. He is looking slightly straight, with a soft, serene expression. I want same face as I uploaded, no alternation, 100% same. The background is a plain, warm-toned wall illuminated by a warm light source from the right, creating a distinct, soft-edged shadow of his profile and hair on the wall behind him. The overall mood is retro and artistic."
+    },
+    {
+      id: 7,
+      title: "Urban staircase edit",
+      text:
+        "A highly realistic photo of a young man sitting stylishly on an old iron staircase outside a building, wearing a loose beige T-shirt, faded blue jeans, white sneakers, a gold wristwatch, and round sunglasses. He is resting one elbow on the railing and the other hand on his chin in a confident pose. The background shows faded concrete walls and soft cinematic lighting with a slightly warm tone. The hairstyle is neat and voluminous, similar to a trendy urban young look. Keep everything exactly the same — pose, outfit, light, body, angle, and background — but replace the face with [user's face], keeping skin tone and lighting natural."
+    },
+    {
+      id: 8,
+      title: "Luxury penthouse portrait",
+      text:
+        "DSLR style 4K ultra-realistic photo — a stylish man (face and hairstyle must be exactly the same and perfect as the uploaded image) is sitting casually on a sleek black leather lounge chair. He wears a crisp white polo shirt, slim-fit navy chinos, and white sneakers. A silver wristwatch and aviator sunglasses complete the look. His posture is relaxed with a confident smile.Background: A luxury penthouse living room with floor-to-ceiling windows, modern grey sofas, indoor plants, and warm natural daylight streaming in."
+    }
+  ],
+  "Retro Saree AI Edits": [
+    {
+      id: 1,
+      title: "Red chiffon retro",
+      text:
+        "In a perfect plain chiffon saree red color Pinterest aesthetic retro saree. It must feel like a 90s movie dark brown wavy curly hair with a small flower tucked visibly into her curls and romanticising windy environment. The girl is standing against a solid wall deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with a golden tones of evoking a sunset or golden hour glow. The background is minimalist and slightly textured the expression on her face is moody, calm yet happy and introspective.",
+      img: images.Redchiffonretro
+    },
+    {
+      id: 2,
+      title: "Yellow chiffon retro",
+      text:
+        "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect plain chiffon saree yellow color Pinteresty aesthetic retro saree. It must feel like a 90s movie dark brown wavy curly hair with a small flower tucked visibly into her curls and romanticising windy environment. The girl is standing against a solid wall deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with golden tones of evoking a sunset or golden hour glow. The background is minimalist and slightly textured the expression on her face is moody, calm yet happy and introspective.",
+      img: images.Yellowchiffonretro
+    },
+    {
+      id: 3,
+      title: "Blue cotton retro",
+      text:
+        "Create a retro, vintage-inspired image - grainy yet bright based on the reference picture. The girl should be draped in a perfect blue cotton saree with small white flower prints, paired with a white blouse with sleeves above the elbow, styled in a Pinterest-inspired aesthetic. The vibe must capture the essence of a 90s movie dark-brown-haired baddie, with silky hair and a small flower tucked visibly into her hair, enhanced by a windy, romantic atmosphere. She is sitting on a wooden bench as a few leaves blow in the air, while dramatic contrasts add mystery and artistry to the scene, creating a moody yet enchanting cinematic effect. Her pose should suggest that she is reading a book.",
+      img: images.Bluecottonretro
+    },
+    {
+      id: 4,
+      title: "Purple retro saree",
+      text:
+        "Create a retro, vintage-inspired image grainy yet bright - based on the reference picture. The girl should be draped in a perfect plain purple saree paired with a black sleeveless blouse on it, Pinterest style aesthetic saree. The vibe must capture the essence of a 90s movie dark brown-haired baddie, with silky hair and a small flower tucked visibly into her hair enhanced by a windy, romantic atmosphere. She stands against an old wooden door, where deep shadows and dramatic contrasts add mystery and artistry to the scene, creating a moody yet enchanting cinematic effect. Make a pose like she is adjusting her saree.",
+      img: images.Purpleretrosaree
+    },
+    {
+      id: 5,
+      title: "Black retro saree",
+      text:
+        "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect black color Pinterest's aesthetic retro saree. It must feel like a 90s movie brown hair baddie with a small flower tucked visibly into her curls and romanticizing windy environment. The girl is standing against a solid wall deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with a golden tones of evoking a sunset or golden hour glow. The background is minimalist and slightly textured the expression on her face is moody, calm yet happy and introspective.",
+      img: images.Blackretrosaree
+    },
+    {
+      id: 6,
+      title: "Royal blue silk retro",
+      text:
+        "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect an elegant royal blue silk saree with golden motifs and a golden border, in Pinteresty aesthetic retro saree. It must feel like a 90s movie brown hair baddie with a small flower tucked visibly into her curls and romanticising windy environment. The girl is standing against a solid wall deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with golden tones of evoking a sunset or golden hour glow. The background is minimalist and slightly textured the expression on her face is moody, calm yet happy and introspective.",
+      img: images.Royalbluesilkretro
     }
   ]
 };
