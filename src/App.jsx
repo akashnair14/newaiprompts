@@ -75,28 +75,29 @@ const prompts = [
   },
   {
     id: 6,
+    title: "Retro Saree AI Edits",
+    description: "Style portraits with elegant retro saree designs.",
+    img: images.Redchiffonretro
+  },
+  {
+    id: 7,
     title: "Cinematic Lion & Vintage Car",
     description: "Create dramatic scenes with lions and vintage cars.",
     img: images.CinematicLion
   },
   {
-    id: 7,
+    id: 8,
     title: "Boy Retro Edits",
     description: "Give your photos a cool retro 80s or 90s vibe.",
     img: images.BoyRetroEdits
   },
   {
-    id: 8,
+    id: 9,
     title: "Luxury Car Edits",
     description: "Transform car photos into sleek luxury visuals.",
     img: images.LuxuryCarEdits
   },
-  {
-    id: 9,
-    title: "Retro Saree AI Edits",
-    description: "Style portraits with elegant retro saree designs.",
-    img: images.Redchiffonretro
-  },
+
   {
     id: 10,
     title: "Giant Statue Edits",
