@@ -24,12 +24,15 @@ import MagentaGarbaGlow from './assets/images/MagentaGarbaGlow.avif';
 import Floralwomanportrait1 from './assets/images/Floralwomanportrait1.avif';
 import Floralwomanportrait2 from './assets/images/Floralwomanportrait2.avif';
 import Floralwomanportrait3 from './assets/images/Floralwomanportrait3.avif';
+import noblemanorange from './assets/images/noblemanorange.png';
+import noblemanred from './assets/images/noblemanred.png';
+import noblemanblue from './assets/images/noblemanblue.png';
 
 const images = {
   navratriGirl, BoyRetroEdits, CinematicLion, FloralPortraitEdits, GiantStatueEdits,
   LuxuryCarEdits, MountainCoffee_Edits, NoblemanHorseAIEdits, RetroSareeAIEdits,
   Streetwear_Fashion_Ai, SunshineYellowDandiya, EmeraldGreenSpin, FieryRedGarba,
-  GreenGhagraPortrait, joyfulDandiyaTwirl, MagentaGarbaGlow, Mountaincoffeeportraitfront, Mountaincoffeeportrait, Floralwomanportrait1, Floralwomanportrait2, Floralwomanportrait3
+  GreenGhagraPortrait, joyfulDandiyaTwirl, MagentaGarbaGlow, Mountaincoffeeportraitfront, Mountaincoffeeportrait, Floralwomanportrait1, Floralwomanportrait2, Floralwomanportrait3, noblemanorange, noblemanred, noblemanblue
 };
 
 const prompts = [
@@ -55,7 +58,7 @@ const prompts = [
     id: 4,
     title: "Nobleman Horse AI Edits",
     description: "Design regal nobleman-on-horse portraits with AI.",
-    img: images.NoblemanHorseAIEdits
+    img: images.noblemanorange
   },
   {
     id: 5,
@@ -172,20 +175,20 @@ const subPromptsData = {
     {
       id: 1,
       title: "Orange nobleman horse",
-      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing orange wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
-      img: images.Floralwomanportrait1
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is dressed in a Orange wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.noblemanorange
     },
     {
       id: 2,
       title: "Red nobleman horse",
-      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing crimson-red wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
-      img: images.Floralwomanportrait2
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is dressed in a Red wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.noblemanred
     },
     {
       id: 3,
       title: "Blue nobleman horse",
-      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is impeccably dressed in a heavy, flowing blue wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
-      img: images.Floralwomanportrait3
+      text: "9:16, Use 100% face above uploaded photo. A cinematic and dramatic portrait of a handsome, pensive young nobleman in late 20s with black hair like uploaded photo, with dark, windswept hair, mounted on a majestic black stallion in a desolate, snow-covered winter forest. He is dressed in a royale Blue wool overcoat over a dark tailored waistcoat and trousers, complemented by high leather riding boots and dark gloves. The lighting is soft and diffused. Face same uploaded picture.",
+      img: images.noblemanblue
     }
   ]
 };
@@ -301,7 +304,7 @@ export default function App() {
               {filteredPrompts.length === 0 ? (
                 <p className="text-center text-gray-400">No prompts found.</p>
               ) : (
-                <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto">
 
                   {filteredPrompts.map((prompt) => (
                     <motion.div
@@ -331,7 +334,7 @@ export default function App() {
               <ArrowLeft className="w-5 h-5 mr-2" /> Back to Prompts
             </button>
             <h2 className="text-3xl font-bold mb-8">{selectedPrompt}</h2>
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {subPrompts.map((sp) => (
                 <motion.div
                   key={sp.id}
