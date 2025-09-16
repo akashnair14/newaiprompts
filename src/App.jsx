@@ -83,10 +83,10 @@ const prompts = [
   },
   {
     id: 2,
-    title: "Mountain Coffee Edits",
-    description: "Create cozy mountain coffee-themed visuals with AI.",
-    img: images.MountainCoffee_Edits,
-    category: "Lifestyle",
+    title: "Retro Couple AI Edits",
+    description: "Create Retro Style Couple AI Edits.",
+    img: images.couplebenchscene,
+    category: "Couple",
   },
   {
     id: 3,
@@ -153,10 +153,10 @@ const prompts = [
   },
   {
     id: 12,
-    title: "Retro Couple AI Edits",
-    description: "Create Retro Style Couple AI Edits.",
-    img: images.couplebenchscene,
-    category: "Couple",
+    title: "Mountain Coffee Edits",
+    description: "Create cozy mountain coffee-themed visuals with AI.",
+    img: images.MountainCoffee_Edits,
+    category: "Lifestyle",
   },
 ];
 
