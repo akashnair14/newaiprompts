@@ -35,8 +35,14 @@ import Royalbluesilkretro from './assets/images/Royalbluesilkretro.png';
 import Blackretrosaree from './assets/images/Blackretrosaree.png';
 import Bluecottonretro from './assets/images/Bluecottonretro.png';
 import couplebenchscene from './assets/images/couplebenchscene.png';
+import BlueSareeHairTouchScene from './assets/images/BlueSareeHairTouchScene.png';
+import DurgaPandal from './assets/images/DurgaPandal.png';
+import PurpleSareeBlackShirtCouple from './assets/images/PurpleSaree&BlackShirtCouple.png';
+import RedSareerosePetalsBenchScene from './assets/images/RedSareerosePetalsBenchScene.png';
+import RedSareeWaistHoldCouple from './assets/images/RedSareeWaistHoldCouple.png';
+import RomanticPoseCouple from './assets/images/RomanticPoseCouple.png';
+import CozyMirrorSelfieCouple from './assets/images/CozyMirrorSelfieCouple.png';
 
-// Your original images object
 const images = {
   navratriGirl,
   BoyRetroEdits,
@@ -69,7 +75,7 @@ const images = {
   Yellowchiffonretro,
   Blackretrosaree,
   Bluecottonretro,
-  couplebenchscene,
+  couplebenchscene, BlueSareeHairTouchScene, DurgaPandal, PurpleSareeBlackShirtCouple, CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple, RomanticPoseCouple,
 };
 
 // Your original prompts with added category field for compatibility
@@ -339,13 +345,13 @@ const subPromptsData = {
       id: 1,
       title: "Blue Saree Hair Touch Scene",
       text: "Generate a moody retro-inspired close-up with cinematic grain and soft brightness. The girl wears a blue retro saree with wavy curls blowing in the wind, a small flower pinned in her hair. The guy in a white Chinese collar kurta tucks a loose strand of her hair behind her ear while gazing into her eyes. The romantic windy atmosphere enhances the essence of a 90s film scene, with deep shadows adding dramatic artistry.",
-      img: images.BluesareeHairTouch,
+      img: images.BlueSareeHairTouchScene,
     },
     {
       id: 2,
       title: "Durga Pandal",
       text: "Convert a 4k HD realistic stunning portrait. Face must be same as uploaded – no alteration, 100% same. Female: Woman with long, dark, wavy hair cascading over her shoulders, wearing a translucent elegant red saree draped over one shoulder, with white flowers tucked behind her right ear. She is looking slightly to her man. Male: Wearing a yellow punjabi and white pajama, a watch on his hand, looking towards her with his hand on her shoulder. Background: Blurred festive 'Maa Durga' backdrop illuminated by warm side light, evoking a retro mood.",
-      img: images.DurgaPandalCouple,
+      img: images.DurgaPandal,
     },
     {
       id: 3,
@@ -357,31 +363,31 @@ const subPromptsData = {
       id: 4,
       title: "Red Saree Rose Petals Bench Scene",
       text: "A cinematic scene where the girl is sitting on a wooden bench and the boy stands behind her, gently kissing her cheek. She wears a red saree with white flower prints and a white sleeveless blouse. Her wavy hair is tousled by the wind as she holds roses. The bench and surrounding area are scattered with rose petals, evoking nostalgic romance.",
-      img: images.RosePetalsBenchScene,
+      img: images.RedSareerosePetalsBenchScene,
     },
     {
       id: 5,
       title: "Cozy Mirror Selfie Couple",
       text: "A young couple takes a mirror selfie in a softly lit hallway. Both wear matching oversized white sweatshirts with black sleeve text. The girl holds the phone and smiles gently, while the boy stands behind her, arm around her shoulders, chin near her head. A cozy, pastel-toned atmosphere highlights their affectionate bond.",
-      img: images.MirrorSelfieCouple,
+      img: images.CozyMirrorSelfieCouple,
     },
     {
       id: 6,
       title: "Red Saree Waist Hold Couple",
       text: "A 90s retro cinematic image with the girl in a red aesthetic saree and the guy in a white Chinese collar kurta. Her hair blows in the wind with a flower tucked in, while he holds her waist and looks into her eyes. They stand against a solid wall with warm golden lighting and moody contrast.",
-      img: images.RedSareeWaistHold,
+      img: images.RedSareeWaistHoldCouple,
     },
     {
       id: 7,
       title: "Purple Saree & Black Shirt Couple",
       text: "Create a retro-style image with the girl in a purple chiffon saree adjusting her hair, standing against a wall with dramatic tree shadows. The guy wears a black shirt and pants with a watch, positioned just behind her. Lighting is moody, romantic, and artistic.",
-      img: images.PurpleSareeBlackShirt,
+      img: images.PurpleSareeBlackShirtCouple,
     },
     {
       id: 8,
       title: "Brown Saree & Suit Couple",
       text: "The girl wears a brown retro saree and the guy is in a suit. She has long wavy black hair with a small flower tucked in, wind blowing to set a nostalgic mood. They stand against a textured wall in warm golden light with dramatic shadows, evoking introspective calmness.",
-      img: images.BrownSareeSuitCouple,
+      img: images.BrownSareeBlackSuit,
     },
     {
       id: 9,
