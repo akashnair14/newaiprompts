@@ -2,6 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Search, Sun, Moon, ArrowLeft, Sparkles, Copy, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import SupportModal from "./SupportModal";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 // Import your original images
 import navratriGirl from './assets/images/Navratri_AI_Photo_for_Girl.avif';
 import BoyRetroEdits from './assets/images/BoyRetroEdits.avif';
@@ -42,6 +46,9 @@ import RedSareerosePetalsBenchScene from './assets/images/RedSareerosePetalsBenc
 import RedSareeWaistHoldCouple from './assets/images/RedSareeWaistHoldCouple.png';
 import RomanticPoseCouple from './assets/images/RomanticPoseCouple.png';
 import CozyMirrorSelfieCouple from './assets/images/CozyMirrorSelfieCouple.png';
+import BrownSareeSuitCouple from './assets/images/BrownSareeSuitCouple.png';
+import RedSareeWhiteKurtaCouple from './assets/images/RedSareeWhiteKurtaCouple.png';
+import BrownSareeRetroSuitCouple from './assets/images/BrownSareeRetroSuitCouple.png';
 
 const images = {
   navratriGirl,
@@ -75,7 +82,7 @@ const images = {
   Yellowchiffonretro,
   Blackretrosaree,
   Bluecottonretro,
-  couplebenchscene, BlueSareeHairTouchScene, DurgaPandal, PurpleSareeBlackShirtCouple, CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple, RomanticPoseCouple,
+  couplebenchscene, BlueSareeHairTouchScene, DurgaPandal, PurpleSareeBlackShirtCouple, CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple, RomanticPoseCouple, BrownSareeSuitCouple, RedSareeWhiteKurtaCouple, BrownSareeRetroSuitCouple
 };
 
 // Your original prompts with added category field for compatibility
@@ -136,20 +143,20 @@ const prompts = [
     img: images.BoyRetroEdits,
     category: "Retro",
   },
-  {
-    id: 9,
-    title: "Luxury Car Edits",
-    description: "Transform car photos into sleek luxury visuals.",
-    img: images.LuxuryCarEdits,
-    category: "Automotive",
-  },
-  {
-    id: 10,
-    title: "Giant Statue Edits",
-    description: "Create majestic giant statue-inspired edits with AI.",
-    img: images.GiantStatueEdits,
-    category: "Fantasy",
-  },
+  // {
+  //   id: 9,
+  //   title: "Luxury Car Edits",
+  //   description: "Transform car photos into sleek luxury visuals.",
+  //   img: images.LuxuryCarEdits,
+  //   category: "Automotive",
+  // },
+  // {
+  //   id: 10,
+  //   title: "Giant Statue Edits",
+  //   description: "Create majestic giant statue-inspired edits with AI.",
+  //   img: images.GiantStatueEdits,
+  //   category: "Fantasy",
+  // },
   {
     id: 11,
     title: "Streetwear Fashion Ai",
@@ -340,7 +347,8 @@ const subPromptsData = {
       text: "Create a retro vintage grainy but bright image of the reference picture but draped in a perfect an elegant royal blue silk saree with golden motifs and a golden border, in Pinteresty aesthetic retro saree. It must feel like a 90s movie brown hair baddie with a small flower tucked visibly into her curls and romanticising windy environment. The girl is standing against a solid wall deep shadows and contrast drama, creating a mysterious and artistic atmosphere where the lighting is warm with golden tones of evoking a sunset or golden hour glow. The background is minimalist and slightly textured the expression on her face is moody, calm yet happy and introspective.",
       img: images.Royalbluesilkretro,
     },
-  ], "Retro Couple AI Edits": [
+  ],
+  "Retro Couple AI Edits": [
     {
       id: 1,
       title: "Blue Saree Hair Touch Scene",
@@ -387,19 +395,19 @@ const subPromptsData = {
       id: 8,
       title: "Brown Saree & Suit Couple",
       text: "The girl wears a brown retro saree and the guy is in a suit. She has long wavy black hair with a small flower tucked in, wind blowing to set a nostalgic mood. They stand against a textured wall in warm golden light with dramatic shadows, evoking introspective calmness.",
-      img: images.BrownSareeBlackSuit,
+      img: images.BrownSareeSuitCouple,
     },
     {
       id: 9,
       title: "Red Saree & White Kurta Couple",
       text: "The girl wears a red retro saree, and the boy is in a white Chinese collar kurta. Her wavy hair blows with a flower tucked in. He holds her waist, gazing into her eyes. They’re against a solid wall with warm lighting and moody shadows, creating a cinematic 90s vibe.",
-      img: images.RedSareeWhiteKurta,
+      img: images.RedSareeWhiteKurtaCouple,
     },
     {
       id: 10,
       title: "Brown Saree & Retro Suit Couple",
       text: "The girl wears a brown Pinteresty saree with red hair and flower tucked into curls. The guy is in a 582-style retro suit. They stand together against a textured wall with dramatic contrast and moody lighting, evoking a retro romantic aura.",
-      img: images.BrownSareeRetroSuit,
+      img: images.BrownSareeRetroSuitCouple,
     },
     {
       id: 11,
@@ -537,31 +545,32 @@ const HowToUseBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-16 w-full z-60 bg-black/80 backdrop-blur-xl border-b border-white/5">
-      <motion.div
-        className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        <span className="text-sm text-purple-300 font-semibold">How to Use This Prompt</span>
-        <ChevronDown className={`w-5 h-5 text-white transition-transform ${isOpen ? "rotate-180" : ""}`} />
-
-        {isOpen && (
-          <motion.div
-            className="mt-2 text-gray-300 text-sm space-y-2"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <p>Step 1: Sign in to <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">gemini.google.com</a></p>
-            <p>Step 2: Upload your image and select the banana icon</p>
-            <p>Step 3: Paste the prompt and hit enter</p>
-            <p>Step 4: Your AI image will be generated</p>
-          </motion.div>
-        )}
-      </motion.div>
+    <div className="fixed top-16 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+      {/* <motion.div */}
+      <div className="max-w-7xl mx-auto px-6 py-3">
+        <div
+          className="flex justify-between items-center cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="text-sm text-purple-300 font-semibold">
+            How to Use This Prompt
+          </span>
+          <ChevronDown className={`w-5 h-5 text-white transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="mt-2 text-gray-300 text-sm space-y-2"
+            >
+              <p>Step 1: Sign in to <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">gemini.google.com</a></p> <p>Step 2: Upload your image and select the banana icon</p> <p>Step 3: Paste the prompt and hit enter</p> <p>Step 4: Your AI image will be generated</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+      {/* </motion.div> */}
     </div>);
 };
 export default function App() {
@@ -571,22 +580,16 @@ export default function App() {
   const [copiedStates, setCopiedStates] = useState({});
   const exploreRef = useRef(null);
 
-  const toggleTheme = () => {
-    setDarkMode(prev => !prev);
-    // Also update <html> for consistency
-    document.documentElement.classList.toggle('dark', !darkMode);
-  };
   const scrollToExplore = () => exploreRef.current?.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
     if (selectedPrompt) window.scrollTo({ top: 0, behavior: "smooth" });
   }, [selectedPrompt]);
 
-  const filteredPrompts = searchTerm.length >= 3
+  const filteredPrompts = searchTerm.trim().length >= 3
     ? prompts.filter(p =>
-      p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      p.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      p.category.toLowerCase().includes(searchTerm.toLowerCase())
+      [p.title, p.description, p.category]
+        .some(field => field.toLowerCase().includes(searchTerm.toLowerCase()))
     )
     : prompts;
 
@@ -620,15 +623,6 @@ export default function App() {
               >
                 NewAIPrompt
               </motion.h1>
-
-              {/* <motion.button
-              onClick={toggleTheme}
-              whileHover={{ scale: 1.1, rotate: 180 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-3 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-            >
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </motion.button> */}
             </div>
           </nav>
           <HowToUseBanner />
@@ -780,9 +774,10 @@ export default function App() {
                             <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             <div className="relative overflow-hidden rounded-t-3xl h-[280px]"> {/* Increased image height to h-72 (288px) for better face visibility */}
-                              <img
+                              <LazyLoadImage
                                 src={prompt.img}
                                 alt={prompt.title}
+                                effect="blur"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                               />
 
@@ -868,12 +863,14 @@ export default function App() {
                       whileHover={{ y: -5 }}
                       className="group relative flex flex-col items-center"
                     >
+
                       {/* --- Card --- */}
                       <div className="bg-white/5 backdrop-blur-2xl rounded-3xl border border-white/10 overflow-hidden transition-all duration-500 group-hover:bg-white/10 group-hover:border-purple-500/30 h-[480px] w-full">
                         <div className="relative overflow-hidden h-[350px]">
-                          <img
+                          <LazyLoadImage
                             src={sp.img}
                             alt={sp.title}
+                            effect="blur"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -918,13 +915,15 @@ export default function App() {
                           </span>
                         )}
                       </div>
-
-
-
                     </motion.div>
                   ))}
                 </div>
-
+                {subPrompts.length === 0 ? (
+                  <p className="text-gray-400 text-lg">No variations available for this prompt yet.</p>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-c
+                  ols-2 lg:grid-cols-4 gap-8"></div>
+                )}
               </motion.section>
             )}
 
