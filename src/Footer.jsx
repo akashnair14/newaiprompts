@@ -35,7 +35,7 @@ export default function Footer({ darkMode }) {
                     </svg>
                 </motion.div>
                 <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                    NewAIPrompt
+                    GenXPrompt
                 </h2>
                 <p className={`${textSecondary} text-center max-w-md`}>
                     Discover premium AI prompts optimized for creativity and productivity.
@@ -69,7 +69,7 @@ export default function Footer({ darkMode }) {
 
             {/* Bottom Text */}
             <p className={`text-xs text-center max-w-lg mx-auto transition-colors duration-200 ${textSecondary}`}>
-                © 2025 <span className="font-semibold text-white">NewAIPrompt</span>. Made with{" "}
+                © 2025 <span className="font-semibold text-white">GenXPrompt</span>. Made with{" "}
                 <span className="text-pink-500 animate-pulse">❤️</span> for AI enthusiasts.
             </p>
         </footer>

@@ -28,7 +28,6 @@ import MagentaGarbaGlow from './assets/images/MagentaGarbaGlow.avif';
 import Floralwomanportrait1 from './assets/images/Floralwomanportrait1.avif';
 import Floralwomanportrait2 from './assets/images/Floralwomanportrait2.avif';
 import Floralwomanportrait3 from './assets/images/Floralwomanportrait3.avif';
-import polaroid from './assets/images/polaroid.avif';
 import noblemanorange from './assets/images/noblemanorange.png';
 import noblemanred from './assets/images/noblemanred.png';
 import noblemanblue from './assets/images/noblemanblue.png';
@@ -49,14 +48,17 @@ import CozyMirrorSelfieCouple from './assets/images/CozyMirrorSelfieCouple.png';
 import BrownSareeSuitCouple from './assets/images/BrownSareeSuitCouple.png';
 import RedSareeWhiteKurtaCouple from './assets/images/RedSareeWhiteKurtaCouple.png';
 import BrownSareeRetroSuitCouple from './assets/images/BrownSareeRetroSuitCouple.png';
-
-
-
 import TempleNavratriCouplePortrait from './assets/images/TempleNavratriCouplePortrait.png';
 import Retro90sNavratriCouple from './assets/images/Retro90sNavratriCouple.png';
 import SunriseNavratriCouple from './assets/images/SunriseNavratriCouple.png';
 import RedGujaratiCouple from './assets/images/RedGujaratiCouple.png';
 import DandiyaNightCouple from './assets/images/DandiyaNightCouple.png';
+
+import WhiteCurtainHug from './assets/images/WhiteCurtainHug.png';
+import MatchingOutfitsHug from './assets/images/MatchingOutfitsHug.png';
+import WinterWindowReflections from './assets/images/WinterWindowReflections.png';
+import GoldenCurtainGlow from './assets/images/GoldenCurtainGlow.png';
+import RooftopNeonNight from './assets/images/RooftopNeonNight.png';
 
 
 const images = {
@@ -81,7 +83,7 @@ const images = {
   Floralwomanportrait1,
   Floralwomanportrait2,
   Floralwomanportrait3,
-  polaroid,
+
   noblemanorange,
   noblemanred,
   noblemanblue,
@@ -95,7 +97,7 @@ const images = {
   CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple,
   RomanticPoseCouple, BrownSareeSuitCouple, RedSareeWhiteKurtaCouple,
   BrownSareeRetroSuitCouple, TempleNavratriCouplePortrait, Retro90sNavratriCouple,
-  SunriseNavratriCouple, RedGujaratiCouple, DandiyaNightCouple
+  SunriseNavratriCouple, RedGujaratiCouple, DandiyaNightCouple, WhiteCurtainHug, MatchingOutfitsHug, WinterWindowReflections, GoldenCurtainGlow, RooftopNeonNight
 };
 
 // Your original prompts with added category field for compatibility
@@ -133,7 +135,7 @@ const prompts = [
     id: 5,
     title: "Gemini Polaroid Prompt",
     description: "Give your couple photos a cool retro polaroid effect.",
-    img: images.polaroid,
+    img: images.WhiteCurtainHug,
     //category: "Retro",
   },
   {
@@ -143,13 +145,13 @@ const prompts = [
     img: images.Redchiffonretro,
     //category: "Fashion",
   },
-  {
-    id: 7,
-    title: "Cinematic Lion & Vintage Car",
-    description: "Create dramatic scenes with lions and vintage cars.",
-    img: images.CinematicLion,
-    //category: "Cinematic",
-  },
+  // {
+  //   id: 7,
+  //   title: "Cinematic Lion & Vintage Car",
+  //   description: "Create dramatic scenes with lions and vintage cars.",
+  //   img: images.CinematicLion,
+  //   //category: "Cinematic",
+  // },
   {
     id: 8,
     title: "Boy Retro Edits",
@@ -499,6 +501,38 @@ const subPromptsData = {
       img: images.DandiyaNightCouple,
     },
   ],
+  "Gemini Polaroid Prompt": [
+    {
+      id: 1,
+      title: "Matching Outfits Hug",
+      text: "Take a picture with a Polaroid camera. The photo should look like a normal photo, without any clear subject or props. The photo should have a slight blur and a consistent light source, such as a flash from a dark room, spread throughout the photo. Do not change the faces. Replace the background behind the two people with a white curtain. (With the guy hugging her.) Change outfits into matching couple outfits.",
+      img: images.MatchingOutfitsHug,
+    },
+    {
+      id: 2,
+      title: "Winter Window Reflections",
+      text: "A Polaroid photograph taken near a window at night, with condensation and blurred reflections of fairy lights outside. The flash brightens the couple in the foreground while leaving the window dreamy and soft-focused. They wear matching knit scarves and coats, giving the photo a cozy, wintry atmosphere. The overall feel is candid and intimate, like a memory of a cold night spent together.",
+      img: images.WinterWindowReflections,
+    },
+    {
+      id: 3,
+      title: "Golden Curtain Glow",
+      text: "A Polaroid shot inside a softly lit room. The background is a simple white curtain glowing slightly from hidden candlelight, creating a diffused golden tone. The edges of the picture have a faint blur from the flash. The couple is wearing matching neutral-toned knit sweaters, hugging naturally, with the vibe of a quiet, intimate evening.",
+      img: images.GoldenCurtainGlow,
+    },
+    {
+      id: 4,
+      title: "White Curtain Hug",
+      text: "Take a picture with a Polaroid camera. The photo should look like a normal photo, without any clear subject or props. The photo should have a slight blur and a consistent light source, such as a flash from a dark room, spread throughout the photo. Do not change the faces. Replace the background behind the two people with a white curtain. (With the guy hugging her.)",
+      img: images.WhiteCurtainHug,
+    },
+    {
+      id: 5,
+      title: "Rooftop Neon Night",
+      text: "A Polaroid picture taken on a rooftop at night. Behind the couple, the city skyline is faintly visible with blurred neon lights and bokeh street lamps. The flash highlights the couple while the background stays grainy and dark, giving it an imperfect charm. The couple wears matching bomber jackets with subtle graphic prints. The atmosphere feels adventurous, late-night, and spontaneous.",
+      img: images.RooftopNeonNight,
+    },
+  ],
 };
 
 // Footer component
@@ -537,7 +571,8 @@ function Footer({ darkMode }) {
             className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400"
             whileHover={{ scale: 1.05 }}
           >
-            NewAIPrompt
+            GenXPrompt
+
           </motion.h2>
 
           <motion.p
@@ -578,7 +613,7 @@ function Footer({ darkMode }) {
         >
           <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"></div>
           <p className="text-gray-400 text-sm">
-            © 2025 <span className="font-semibold text-white">NewAIPrompt</span>. Crafted with{" "}
+            © 2025 <span className="font-semibold text-white">GenXPrompt</span>. Crafted with{" "}
             <motion.span
               className="text-pink-400"
               animate={{ scale: [1, 1.2, 1] }}
@@ -673,7 +708,7 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 className="text-2xl font-black bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
               >
-                NewAIPrompt
+                GenXPrompt
               </motion.h1>
             </div>
           </nav>
@@ -706,9 +741,7 @@ export default function App() {
                         }}
                         style={{ backgroundSize: "200% 200%" }}
                       >
-                        NewAI
-                        <br />
-                        Prompt
+                        GenXPrompt
                       </motion.h1>
 
                       <motion.div
