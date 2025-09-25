@@ -50,6 +50,15 @@ import BrownSareeSuitCouple from './assets/images/BrownSareeSuitCouple.png';
 import RedSareeWhiteKurtaCouple from './assets/images/RedSareeWhiteKurtaCouple.png';
 import BrownSareeRetroSuitCouple from './assets/images/BrownSareeRetroSuitCouple.png';
 
+
+
+import TempleNavratriCouplePortrait from './assets/images/TempleNavratriCouplePortrait.png';
+import Retro90sNavratriCouple from './assets/images/Retro90sNavratriCouple.png';
+import SunriseNavratriCouple from './assets/images/SunriseNavratriCouple.png';
+import RedGujaratiCouple from './assets/images/RedGujaratiCouple.png';
+import DandiyaNightCouple from './assets/images/DandiyaNightCouple.png';
+
+
 const images = {
   navratriGirl,
   BoyRetroEdits,
@@ -82,94 +91,106 @@ const images = {
   Yellowchiffonretro,
   Blackretrosaree,
   Bluecottonretro,
-  couplebenchscene, BlueSareeHairTouchScene, DurgaPandal, PurpleSareeBlackShirtCouple, CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple, RomanticPoseCouple, BrownSareeSuitCouple, RedSareeWhiteKurtaCouple, BrownSareeRetroSuitCouple
+  couplebenchscene, BlueSareeHairTouchScene, DurgaPandal, PurpleSareeBlackShirtCouple,
+  CozyMirrorSelfieCouple, RedSareerosePetalsBenchScene, RedSareeWaistHoldCouple,
+  RomanticPoseCouple, BrownSareeSuitCouple, RedSareeWhiteKurtaCouple,
+  BrownSareeRetroSuitCouple, TempleNavratriCouplePortrait, Retro90sNavratriCouple,
+  SunriseNavratriCouple, RedGujaratiCouple, DandiyaNightCouple
 };
 
 // Your original prompts with added category field for compatibility
 const prompts = [
   {
     id: 1,
-    title: "Navratri AI Photo for Girl",
-    description: "Transform your portrait into a vibrant Navratri festival look.",
-    img: images.navratriGirl,
-    category: "Festival",
+    title: "Couple Navratri Prompt",
+    description: "Create beautiful Navaratri visuals with your partner with AI.",
+    img: images.DandiyaNightCouple,
+    //category: "Lifestyle",
   },
   {
     id: 2,
-    title: "Retro Couple AI Edits",
-    description: "Create Retro Style Couple AI Edits.",
-    img: images.couplebenchscene,
-    category: "Couple",
+    title: "Navratri AI Photo for Girl",
+    description: "Transform your portrait into a vibrant Navratri festival look.",
+    img: images.navratriGirl,
+    //category: "Festival",
   },
   {
     id: 3,
-    title: "Floral Portrait Edits",
-    description: "Add floral patterns and soft vibes to your portraits.",
-    img: images.FloralPortraitEdits,
-    category: "Portrait",
+    title: "Retro Couple AI Edits",
+    description: "Create Retro Style Couple AI Edits.",
+    img: images.couplebenchscene,
+    //category: "Couple",
   },
+
   {
     id: 4,
     title: "Nobleman Horse AI Edits",
     description: "Design regal nobleman-on-horse portraits with AI.",
     img: images.noblemanorange,
-    category: "Fantasy",
+    //category: "Fantasy",
   },
   {
     id: 5,
     title: "Gemini Polaroid Prompt",
     description: "Give your couple photos a cool retro polaroid effect.",
     img: images.polaroid,
-    category: "Retro",
+    //category: "Retro",
   },
   {
     id: 6,
     title: "Retro Saree AI Edits",
     description: "Style portraits with elegant retro saree designs.",
     img: images.Redchiffonretro,
-    category: "Fashion",
+    //category: "Fashion",
   },
   {
     id: 7,
     title: "Cinematic Lion & Vintage Car",
     description: "Create dramatic scenes with lions and vintage cars.",
     img: images.CinematicLion,
-    category: "Cinematic",
+    //category: "Cinematic",
   },
   {
     id: 8,
     title: "Boy Retro Edits",
     description: "Give your photos a cool retro 80s or 90s vibe.",
     img: images.BoyRetroEdits,
-    category: "Retro",
+    //category: "Retro",
   },
   // {
   //   id: 9,
   //   title: "Luxury Car Edits",
   //   description: "Transform car photos into sleek luxury visuals.",
   //   img: images.LuxuryCarEdits,
-  //   category: "Automotive",
+  //   //category: "Automotive",
   // },
   // {
   //   id: 10,
   //   title: "Giant Statue Edits",
   //   description: "Create majestic giant statue-inspired edits with AI.",
   //   img: images.GiantStatueEdits,
-  //   category: "Fantasy",
+  //   //category: "Fantasy",
   // },
   {
     id: 11,
     title: "Streetwear Fashion Ai",
     description: "Create Street Style fashionwear with AI.",
     img: images.Streetwear_Fashion_Ai,
-    category: "Fashion",
+    //category: "Fashion",
   },
   {
     id: 12,
     title: "Mountain Coffee Edits",
     description: "Create cozy mountain coffee-themed visuals with AI.",
     img: images.MountainCoffee_Edits,
-    category: "Lifestyle",
+    //category: "Lifestyle",
+  },
+  {
+    id: 13,
+    title: "Floral Portrait Edits",
+    description: "Add floral patterns and soft vibes to your portraits.",
+    img: images.FloralPortraitEdits,
+    //category: "Portrait",
   },
 ];
 
@@ -446,7 +467,38 @@ const subPromptsData = {
       img: images.RoyalArchwayCouple,
     },
   ],
-
+  "Couple Navratri Prompt": [
+    {
+      id: 1,
+      title: "Temple Navratri Couple Portrait",
+      text: "vibrant temple or festival setting. The woman is wearing an elegant sheer red saree with a matching blouse, her dark hair styled with white flowers. The man is wearing a traditional plain red kurta pajama with sunglasses and a watch. They are looking at each other warmly. In the soft-focus background, there are richly decorated idols of Goddess Ambe Maa and other deities, with festive lighting and traditional decorations. The atmosphere is festive and warm.",
+      img: images.TempleNavratriCouplePortrait,
+    },
+    {
+      id: 2,
+      title: "Retro 90s Navratri Couple",
+      text: "Ultra-realistic retro 90s Pinterest-style cinematic, grainy bright. Girl wearing a colorful Navratri lehenga choli with intricate embroidery and mirror work, leaning back to the guy, her long hair flowing in the wind. Guy in a traditional embroidered kurta pyjama with Chinese collar, standing back-to-back with her, looking sideways. Faces must be 100% identical to the reference image. Medium shot, 50mm lens, dramatic festive lights and shadows on the wall, Navratri vibes - glowing fairy lights, decorated dandiya sticks, and a nostalgic cinematic festival atmosphere.",
+      img: images.Retro90sNavratriCouple,
+    },
+    {
+      id: 3,
+      title: "Sunrise Navratri Couple",
+      text: "A handsome man and a beautiful woman [exact faces from the images], dressed in vibrant Navratri traditional attire - the woman in a (color of lehenga) lehenga choli with intricate embroidery, and the man in a (color of kurta) kurta pajama with detailed embroidery. Both hold decorated dandiya sticks, standing in warm sunrise/sunset lighting that casts dramatic shadows on the wall behind them.",
+      img: images.SunriseNavratriCouple,
+    },
+    {
+      id: 4,
+      title: "Red Gujarati Couple",
+      text: "Ultra-realistic 8K portrait of a Gujarati couple in Red Garba attire, looking at the camera. Man in embroidered kediyu, no turban, natural hair, churidar bottoms. Woman in embroidered chaniya choli with dupatta, silver jewelry. Realistic hands, flawless fabric, retro 90's sunlight studio, no extra people.",
+      img: images.RedGujaratiCouple,
+    },
+    {
+      id: 5,
+      title: "Dandiya Night Couple",
+      text: "Ultra-realistic cinematic image of a beautiful woman (face extracted from provided image) and a handsome man (face extracted from provided image) joyfully playing dandiya together. The woman has a radiant smile, her hair flying as she twirls gracefully, dressed in a colorful traditional ghagra choli with intricate embroidery and mirror work. Beside her, the man dances with equal energy, holding decorated dandiya sticks, dressed in a vibrant traditional kurta-pyjama with detailed embroidery and mirror work. Both are captured in mid-movement, exuding happiness and festive spirit. The lively, blurred background features a vibrant nighttime Navratri festival with other dancers, twinkling fairy lights, and colorful decorations. The shot is taken from a slightly low angle emphasizing their dynamic energy, synchronized movement, and the celebratory atmosphere.",
+      img: images.DandiyaNightCouple,
+    },
+  ],
 };
 
 // Footer component
